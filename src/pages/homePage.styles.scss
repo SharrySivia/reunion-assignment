@@ -58,6 +58,25 @@
         label {
           color: $color-primary;
           font-weight: 400;
+
+          .information-icon {
+            position: relative;
+            cursor: pointer;
+            color: $color-dark;
+
+            .information {
+              position: absolute;
+              display: inline-block;
+              top: -2.5rem;
+              left: 0rem;
+              width: 170px;
+              padding: 0.4rem;
+              background-color: $color-grey;
+              font-size: 0.7rem;
+              color: $color-grey-light;
+              border-radius: 10px;
+            }
+          }
         }
       }
     }

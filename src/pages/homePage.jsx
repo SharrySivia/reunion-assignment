@@ -23,6 +23,7 @@ function HomePage() {
   });
 
   const [data, setData] = useState([...propertiesData]);
+  const [info, setInfo] = useState(false);
 
   const handleChange = (type, value) => {
     setFilters({ ...filters, [type]: value });
@@ -66,7 +67,21 @@ function HomePage() {
           <div className="input-container">
             <div className="label-container">
               <img className="icon" src={locationLogo} alt="logo" />
-              <label htmlFor="states">Location</label>
+              <label htmlFor="states">
+                Location{" "}
+                <span
+                  className="information-icon"
+                  onMouseEnter={() => setInfo(true)}
+                  onMouseOut={() => setInfo(false)}
+                >
+                  &#x1F6C8;
+                  {info && (
+                    <span className="information">
+                      Use locations from New york, California or Illinois
+                    </span>
+                  )}
+                </span>
+              </label>
             </div>
             <CustomInput
               id="states"
@@ -107,6 +122,7 @@ function HomePage() {
                 type="number"
                 name="priceMin"
                 placeholder="min"
+                min={0}
                 handleChange={handleChange}
               />
               <CustomInput
@@ -114,6 +130,7 @@ function HomePage() {
                 type="number"
                 name="priceMax"
                 placeholder="max"
+                min={0}
                 handleChange={handleChange}
               />
             </div>
