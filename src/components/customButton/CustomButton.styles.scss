@@ -1,0 +1,26 @@
+@import "../../globals.scss";
+
+.custom-button {
+  align-self: flex-end;
+  font-family: inherit;
+  font-weight: 600;
+  background-color: $color-primary;
+  padding: 0.7rem 1.5rem;
+  outline: none;
+  border: 2px solid transparent;
+  color: $color-grey-light;
+  border-radius: 12px;
+  transition: border-color 0.18s ease-in-out, color 0.18s ease-in-out,
+    background-color 0.18s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: #fff;
+    color: $color-primary;
+    border-color: $color-primary;
+    box-shadow: 0 0.5rem 1rem rgba($color-dark, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 0.3rem 1rem rgba($color-dark, 0.1);
+  }
+}
