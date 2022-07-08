@@ -23,4 +23,8 @@
   &:active {
     box-shadow: 0 0.3rem 1rem rgba($color-dark, 0.1);
   }
+
+  @media (max-width: 520px) {
+    align-self: center;
+  }
 }
